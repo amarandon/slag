@@ -1,0 +1,85 @@
+Requirements
+============
+
+Slag primary platform is GNU/Linux. The build process is almost the same on
+other platforms. See files README.YourPlatform for specific notes about your
+platform.
+
+These libraries are mandatory :
+
+  - Qt 4, http://www.trolltech.com/products/qt
+  - libsndfile, http://www.mega-nerd.com/libsndfile/
+  - libsamplerate, http://www.mega-nerd.com/SRC/
+
+You'll also need at least one of these for audio ouput :
+
+  - JACK, http://jackit.sourceforge.net/
+  - libao, http://www.xiph.org/ao/
+
+Actually, it's possible to compile Slag with neither JACK nor libao. You won't
+hear anything but you'll be able to see the GUI.
+
+To compile succesfully, you may need to set the QTDIR environment variable to
+point to your Qt library path. You also need to have the pkg-config utility 
+installed.
+
+Installation
+============
+
+If you made a checkout from CVS, you'll need to generate the ./configure 
+script. It requires to have the autoconf package installed and to type :
+
+$ make -f Makefile.cvs
+
+To compile and install the program, type the following command :
+
+$ ./configure --prefix=/where/to/install
+
+Slag doesn't need to run as root. You can install it in a directory under your
+home directory. If you don't provide a --prefix option to ./configure , Slag
+will however try to install in /usr/local and you'll need to be root to make
+install. You may want to pass --enable-debug option to enable debug code. Its
+useful if you find a bug and want to send me a core dump but the code won't be
+optimized by the compiler. Installed audio output libraries should be
+automatically detected.
+
+Then type :
+
+$ make
+$ make install
+
+Usage
+=====
+
+To run the program just type :
+
+$ slag
+
+It will start with the default song loaded.  If you run slag with -h option
+you'll see available command line options. Slag try to use JACK for audio output
+by default. You must use -a option to use libao, and then use the settings
+dialog to make this choice persistant.   If you have problems with libao, be
+sure that it's configured to use an available output: check /etc/libao.conf or
+~/.libao files.  See man libao.conf for details. The -v option prints some debug
+informations.
+
+Configuration is stored in file ~/.qt/slagrc.
+
+See http://www.nongnu.org/slag/tutorial.html for tips on Slag usage.
+
+Contact
+=======
+
+This is my first open source software so don't hesitate to send feedback. Even
+if I did my best to make Slag stable, you may find bugs. Don't hesitate to send
+a mail at <al@alpage.org> with a description of the bug, and the way to
+reproduce it if you can. See file AUTHORS for other contributors.
+
+License
+=======
+
+Slag is released under the GNU General Public License, see file COPYING for
+details. Included sound files are by opm from FreeSound website
+<http://freesound.iua.upf.edu/usersViewSingle.php?id=1622> and are released
+under the Creative Commons Sampling Plus 1.0 License. See files in sounds
+directory for details.

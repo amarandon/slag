@@ -1,0 +1,318 @@
+<ui version="4.0" stdsetdef="1" >
+  <author>Alex Marandon</author>
+  <comment>  $Id: preferences_dialog.ui,v 1.11 2007/01/26 07:39:55 rhizome Exp $
+
+      Copyright (C) 2004-2007 Alex Marandon
+
+  This file is part of slag, a pattern-based audio sequencer.
+
+  slag is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2, or (at your option)
+  any later version.
+
+  slag is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with slag; see the file COPYING.  If not, write to
+  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+</comment>
+  <exportmacro></exportmacro>
+  <class>PreferencesDialog</class>
+  <widget class="QDialog" name="PreferencesDialog" >
+    <property name="geometry" >
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>332</width>
+        <height>253</height>
+      </rect>
+    </property>
+    <property name="windowTitle" >
+      <string>Preferences</string>
+    </property>
+    <layout class="QVBoxLayout" >
+      <item>
+        <widget class="QCheckBox" name="openLastSongBox" >
+          <property name="text" >
+            <string>Open last song at startup</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <layout class="QHBoxLayout" >
+          <property name="margin" >
+            <number>0</number>
+          </property>
+          <item>
+            <layout class="QGridLayout" >
+              <property name="spacing" >
+                <number>8</number>
+              </property>
+              <property name="margin" >
+                <number>0</number>
+              </property>
+              <item row="1" column="0" >
+                <widget class="QLabel" name="bufferSizeLabel" >
+                  <property name="text" >
+                    <string>Buffer size :</string>
+                  </property>
+                  <property name="alignment" >
+                    <set>Qt::AlignVCenter</set>
+                  </property>
+                  <property name="wordWrap" >
+                    <bool>false</bool>
+                  </property>
+                </widget>
+              </item>
+              <item rowspan="1" row="1" column="1" colspan="2" >
+                <widget class="QComboBox" name="bufferSizeBox" >
+                  <item>
+                    <property name="text" >
+                      <string>64</string>
+                    </property>
+                  </item>
+                  <item>
+                    <property name="text" >
+                      <string>128</string>
+                    </property>
+                  </item>
+                  <item>
+                    <property name="text" >
+                      <string>256</string>
+                    </property>
+                  </item>
+                  <item>
+                    <property name="text" >
+                      <string>512</string>
+                    </property>
+                  </item>
+                  <item>
+                    <property name="text" >
+                      <string>1024</string>
+                    </property>
+                  </item>
+                  <item>
+                    <property name="text" >
+                      <string>2048</string>
+                    </property>
+                  </item>
+                  <item>
+                    <property name="text" >
+                      <string>4096</string>
+                    </property>
+                  </item>
+                </widget>
+              </item>
+              <item rowspan="1" row="0" column="0" colspan="2" >
+                <widget class="QLabel" name="audioDriverLabel" >
+                  <property name="text" >
+                    <string>Audio driver :</string>
+                  </property>
+                  <property name="alignment" >
+                    <set>Qt::AlignVCenter</set>
+                  </property>
+                  <property name="wordWrap" >
+                    <bool>false</bool>
+                  </property>
+                </widget>
+              </item>
+              <item row="0" column="2" >
+                <widget class="QComboBox" name="audioDriverBox" >
+                  <item>
+                    <property name="text" >
+                      <string>RtAudio</string>
+                    </property>
+                  </item>
+                  <item>
+                    <property name="text" >
+                      <string>libao</string>
+                    </property>
+                  </item>
+                  <item>
+                    <property name="text" >
+                      <string>JACK</string>
+                    </property>
+                  </item>
+                  <item>
+                    <property name="text" >
+                      <string>Null</string>
+                    </property>
+                  </item>
+                </widget>
+              </item>
+            </layout>
+          </item>
+          <item>
+            <spacer name="spacer4" >
+              <property name="sizeHint" >
+                <size>
+                  <width>40</width>
+                  <height>20</height>
+                </size>
+              </property>
+              <property name="sizeType" >
+                <enum>Expanding</enum>
+              </property>
+              <property name="orientation" >
+                <enum>Horizontal</enum>
+              </property>
+            </spacer>
+          </item>
+        </layout>
+      </item>
+      <item>
+        <widget class="Q3GroupBox" name="jackGroupBox" >
+          <property name="enabled" >
+            <bool>false</bool>
+          </property>
+          <property name="title" >
+            <string>JACK preferences</string>
+          </property>
+          <widget class="QCheckBox" name="jackTrackOutputsBox" >
+            <property name="geometry" >
+              <rect>
+                <x>20</x>
+                <y>20</y>
+                <width>270</width>
+                <height>20</height>
+              </rect>
+            </property>
+            <property name="sizePolicy" >
+              <sizepolicy>
+                <hsizetype>5</hsizetype>
+                <vsizetype>0</vsizetype>
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+              </sizepolicy>
+            </property>
+            <property name="text" >
+              <string>Track output ports</string>
+            </property>
+          </widget>
+          <widget class="QCheckBox" name="jackAutoConnectBox" >
+            <property name="geometry" >
+              <rect>
+                <x>20</x>
+                <y>50</y>
+                <width>270</width>
+                <height>40</height>
+              </rect>
+            </property>
+            <property name="sizePolicy" >
+              <sizepolicy>
+                <hsizetype>3</hsizetype>
+                <vsizetype>7</vsizetype>
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+              </sizepolicy>
+            </property>
+            <property name="text" >
+              <string>Auto-connect to output ports</string>
+            </property>
+          </widget>
+        </widget>
+      </item>
+      <item>
+        <layout class="QHBoxLayout" >
+          <property name="margin" >
+            <number>0</number>
+          </property>
+          <item>
+            <spacer name="spacer10" >
+              <property name="sizeHint" >
+                <size>
+                  <width>40</width>
+                  <height>20</height>
+                </size>
+              </property>
+              <property name="sizeType" >
+                <enum>Expanding</enum>
+              </property>
+              <property name="orientation" >
+                <enum>Horizontal</enum>
+              </property>
+            </spacer>
+          </item>
+          <item>
+            <widget class="QPushButton" name="okButton" >
+              <property name="text" >
+                <string>Ok</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <spacer name="spacer9" >
+              <property name="sizeHint" >
+                <size>
+                  <width>30</width>
+                  <height>20</height>
+                </size>
+              </property>
+              <property name="sizeType" >
+                <enum>Expanding</enum>
+              </property>
+              <property name="orientation" >
+                <enum>Horizontal</enum>
+              </property>
+            </spacer>
+          </item>
+          <item>
+            <widget class="QPushButton" name="cancelButton" >
+              <property name="text" >
+                <string>Cancel</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <spacer name="spacer11" >
+              <property name="sizeHint" >
+                <size>
+                  <width>40</width>
+                  <height>20</height>
+                </size>
+              </property>
+              <property name="sizeType" >
+                <enum>Expanding</enum>
+              </property>
+              <property name="orientation" >
+                <enum>Horizontal</enum>
+              </property>
+            </spacer>
+          </item>
+        </layout>
+      </item>
+    </layout>
+  </widget>
+  <layoutdefault spacing="6" margin="11" />
+  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+  <connections>
+    <connection>
+      <sender>audioDriverBox</sender>
+      <signal>activated(QString)</signal>
+      <receiver>PreferencesDialog</receiver>
+      <slot>audioDriverSelected(QString)</slot>
+    </connection>
+    <connection>
+      <sender>okButton</sender>
+      <signal>clicked()</signal>
+      <receiver>PreferencesDialog</receiver>
+      <slot>accept()</slot>
+    </connection>
+    <connection>
+      <sender>cancelButton</sender>
+      <signal>clicked()</signal>
+      <receiver>PreferencesDialog</receiver>
+      <slot>reject()</slot>
+    </connection>
+    <connection>
+      <sender>audioDriverBox</sender>
+      <signal>highlighted(QString)</signal>
+      <receiver>PreferencesDialog</receiver>
+      <slot>audioDriverSelected(QString)</slot>
+    </connection>
+  </connections>
+</ui>

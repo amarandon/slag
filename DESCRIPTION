@@ -1,0 +1,5 @@
+The Slag project is a pattern-based audio sequencer that can currently be used
+as a simple drum box. It features real-time editing, optional JACK support with
+individual ports for tracks, volume settings for pads and tracks, a virtually
+unlimited number of tracks and patterns, the ability to link song parts
+together, and real-time audio file output.

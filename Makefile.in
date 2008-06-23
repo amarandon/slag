@@ -1,0 +1,87 @@
+########################################################################
+#
+#   $Id: Makefile.in,v 1.8 2007/01/26 07:39:55 rhizome Exp $
+#
+#       Copyright (C) 2004-2007 Alex Marandon
+# 
+#   This file is part of slag, a pattern-based audio sequencer.
+# 
+#   slag is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2, or (at your option)
+#   any later version.
+# 
+#   slag is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+# 
+#   You should have received a copy of the GNU General Public License
+#   along with slag; see the file COPYING.  If not, write to
+#   the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+########################################################################
+prefix  = @ac_prefix@
+qmake   = @ac_qmake@
+mac_ressources=slag.app/Contents/Resources
+
+name    = slag
+
+
+headers = \
+        src/*.h \
+	src/*/*.h \
+	src/gui/preferences/preferences_dialog.ui.h \
+	src/gui/song_properties/song_properties_dialog.ui.h
+          
+sources = \
+	src/Slag.cpp \
+	src/*/*.cpp
+
+
+all:	$(name)
+
+bundle: $(name)_mac.mak $(name)
+	for my_dir in l10n examples sounds; \
+	do \
+	  if ! test -d $(mac_ressources)/$$my_dir; \
+	    then mkdir -p -v $(mac_ressources)/$$my_dir; \
+	  fi; \
+	done
+	cp sounds/*.wav $(mac_ressources)/sounds/
+	cp examples/basic_kit.xml $(mac_ressources)/examples/
+	cp l10n/fr.qm $(mac_ressources)/l10n/
+
+mac_pkg: bundle
+	tar cjf slag-macosx-ppc.tar.bz2 slag.app
+
+$(name)_mac.mak: $(name).pro
+	@$(qmake) -o $(name).mak $(name).pro "CONFIG+=mac_static"
+
+$(name).mak:	$(name).pro
+	@$(qmake) -o $(name).mak $(name).pro
+
+$(name):	$(name).mak $(sources) $(headers)
+	@make -f $(name).mak
+
+install:	$(name)
+	install -d -m 0755 $(DESTDIR)$(prefix)/bin
+	install -d -m 0755 $(DESTDIR)$(prefix)/share/$(name)/examples
+	install -d -m 0755 $(DESTDIR)$(prefix)/share/$(name)/sounds
+	install -d -m 0755 $(DESTDIR)$(prefix)/share/$(name)/l10n
+	install -m 0755 $(name) $(DESTDIR)$(prefix)/bin/$(name)
+	install -m 0644 sounds/*.wav $(DESTDIR)$(prefix)/share/$(name)/sounds
+	install -m 0644 sounds/*.txt $(DESTDIR)$(prefix)/share/$(name)/sounds
+	install -m 0644 examples/*.xml \
+		    $(DESTDIR)$(prefix)/share/$(name)/examples
+	install -m 0644 l10n/*.qm $(DESTDIR)$(prefix)/share/$(name)/l10n
+
+uninstall:	$(DESTDIR)$(prefix)/bin/$(name)
+	@rm -vf $(DESTDIR)$(prefix)/bin/$(name)
+	@rm -vrf $(DESTDIR)$(prefix)/share/$(name)
+
+clean:	$(name).mak
+	@make -f $(name).mak clean
+	@rm -f $(name) $(name).mak
+	@rm -rf *.cache *.log *.status
+

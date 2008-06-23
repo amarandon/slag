@@ -1,0 +1,14 @@
+NetBSD specific notes
+=====================
+
+On NetBSD, slag has only been tested with libao, not with JACK.
+
+I had to set a few environment variables to compile and run Slag on NetBSD 3.0.
+With a bourne style shell, the commands are :
+
+	export QTDIR=/usr/pkg/qt3
+	export LD_LIBRARY_PATH=/usr/X11R6/lib
+
+The last one should be fixed by passing -Wl,-R/usr/X11R6/lib to the linker 
+in order to embed this path into the binary. However I haven't found yet 
+a clean way to do this in the build process.

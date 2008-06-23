@@ -1,0 +1,142 @@
+########################################################################
+#
+#   $Id: slag.pro.in,v 1.22 2007/01/28 08:13:58 rhizome Exp $
+#
+#       Copyright (C) 2004-2007 Alex Marandon
+# 
+#   This file is part of slag, a pattern-based audio sequencer.
+# 
+#   slag is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2, or (at your option)
+#   any later version.
+# 
+#   slag is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+# 
+#   You should have received a copy of the GNU General Public License
+#   along with slag; see the file COPYING.  If not, write to
+#   the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+########################################################################
+
+AUDIO_OUTPUT = @ac_audio_output@
+
+mac_static {
+    QMAKE_LIBS_QT =
+    QMAKE_LIBS_QT_THREAD =
+    LIBS += $(QTDIR)/lib/libqt-mt.a /usr/local/lib/libsndfile.a /usr/local/lib/libsamplerate.a -lz -framework Carbon
+}
+
+INCLUDEPATH += .
+TEMPLATE = app
+CONFIG  += qt thread warn_on @ac_debug@
+QT += qt3support xml
+contains(CONFIG, debug) { 
+    message(debug enabled) 
+    unix:linux-g++:QMAKE_CXXFLAGS_DEBUG += -D__RTAUDIO_DEBUG__
+}
+LANGUAGE = C++
+! contains(CONFIG, mac_static) {
+    LIBS    += @SAMPLERATE_LIBS@ @SNDFILE_LIBS@ @JACK_LIBS@ @AO_LIBS@
+    unix:linux-g++:LIBS += -lasound
+}
+INCPATH += @ac_incpath@
+QMAKE_CXXFLAGS_DEBUG += @SNDFILE_CFLAGS@ @SAMPLERATE_CFLAGS@ @JACK_CFLAGS@ @AO_CFLAGS@
+QMAKE_CXXFLAGS_RELEASE += @SNDFILE_CFLAGS@ @SAMPLERATE_CFLAGS@ @JACK_CFLAGS@ @AO_CFLAGS@ 
+
+unix:linux-g++:QMAKE_CXXFLAGS_DEBUG += -D__LINUX_ALSA__
+unix:linux-g++:QMAKE_CXXFLAGS_RELEASE += -D__LINUX_ALSA__
+
+#Uncomment to unable strict compiler checks
+#QMAKE_CXXFLAGS_DEBUG += -pedantic -ansi -Winline
+
+#Add your optimization flags here
+#QMAKE_CXXFLAGS_RELEASE += -O3  -march=athlon-xp -pipe -fomit-frame-pointer 
+
+OBJECTS_DIR=./object_files
+MOC_DIR=./src/moc
+
+HEADERS += src/audio_engine/SongReader.h src/audio_engine/Pad.h \
+           src/audio_engine/Song.h \
+           src/audio_engine/Pattern.h \
+           src/audio_engine/Part.h src/audio_engine/Channel.h \
+           src/audio_engine/AudibleElem.h \
+           src/audio_engine/ChannelPtrList.h \
+           src/audio_engine/UntitledList.h \
+           src/audio_IO/AudioDriver.h \
+           src/gui/MainWidget.h src/gui/ToolBar.h \
+           src/gui/TimeLine.h \
+           src/gui/song_properties/song_properties_dialog.ui.h \
+           src/gui/preferences/preferences_dialog.ui.h \
+           src/Slag.h \
+           src/gui/PatternRow.h src/gui/ChannelMenu.h src/gui/PartMenu.h \
+           src/gui/StringListEdit.h src/gui/NamedButton.h \
+           src/gui/PadButton.h src/gui/ChannelRow.h \
+           src/gui/SndFileFormatDialog.h \
+           src/gui/SpinSlider.h \
+           src/gui/PatternRowStack.h \
+           src/gui/Fader.h \
+           src/gui/PanFader.h
+
+SOURCES += src/config/Config.cpp \
+           src/audio_engine/SongReader.cpp \
+           src/audio_engine/Song.cpp \
+           src/audio_engine/Pattern.cpp \
+           src/audio_engine/Part.cpp \
+           src/audio_engine/AudibleElem.cpp \
+           src/audio_engine/Channel.cpp \
+           src/audio_engine/Pad.cpp \
+           src/audio_engine/Serialize.cpp \
+           src/audio_engine/UntitledList.cpp \
+           src/audio_IO/WavFile.cpp \
+           src/audio_IO/WavFileOutput.cpp \
+           src/audio_IO/AudioDriver.cpp \
+           src/audio_IO/NullDriver.cpp \
+           src/audio_IO/RtAudioDriver.cpp \
+           src/audio_IO/RtAudio.cpp \
+           src/audio_IO/AudioDriverFactory.cpp \
+           src/gui/MainWidget.cpp \
+           src/gui/ToolBar.cpp \
+           src/gui/TimeLine.cpp \
+           src/gui/PatternRow.cpp src/gui/ChannelMenu.cpp src/gui/PartMenu.cpp \
+           src/gui/StringListEdit.cpp src/gui/NamedButton.cpp \
+           src/gui/PadButton.cpp \
+           src/Slag.cpp  src/gui/ChannelRow.cpp \
+           src/gui/SndFileFormatDialog.cpp \
+           src/gui/SpinSlider.cpp \
+           src/gui/PatternRowStack.cpp \
+           src/gui/Fader.cpp \
+           src/gui/PanFader.cpp
+
+
+
+FORMS += src/gui/song_properties/song_properties_dialog.ui
+FORMS += src/gui/preferences/preferences_dialog.ui
+UI_DIR = src/gui
+
+RESOURCES = slag.qrc
+
+TRANSLATIONS=l10n/fr.ts
+
+contains( AUDIO_OUTPUT, jack ) {
+    DEFINES += WITH_JACK
+    HEADERS += src/audio_IO/ChannelJackDriver.h
+    SOURCES += src/audio_IO/JackDriver.cpp \
+               src/audio_IO/ChannelJackDriver.cpp \
+               src/audio_IO/RingBufferDriver.cpp
+    message("JACK support enabled") 
+}
+
+contains( AUDIO_OUTPUT, libao ) {
+    DEFINES += WITH_LIBAO
+    HEADERS += src/audio_IO/LibaoDriver.h \
+               src/audio_IO/LibaoWrapper.h
+    SOURCES += src/audio_IO/LibaoDriver.cpp \
+               src/audio_IO/LibaoWrapper.cpp
+    message("libao support enabled") 
+} 
+
+#EOF

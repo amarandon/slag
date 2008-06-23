@@ -1,0 +1,8 @@
+slag-0.1:
+        - improved libao driver initialization
+        - fixed compilation problems with GCC 4
+        - fixed crash when stoping audio file output
+        - added support for NetBSD and Mac OS X platforms
+        - small bug fixes and enhancements
+slag-0.1pre1:
+        Initial public version.

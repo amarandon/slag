@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<!-- 
+ 
+  $Id: essai.xml,v 1.2 2005/01/15 14:05:26 rhizome Exp $
+
+
+      Copyright (C) 2004, 2005 Alex Marandon
+
+  This file is part of slag, a pattern-based audio sequencer.
+
+  slag is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2, or (at your option)
+  any later version.
+
+  slag is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with slag; see the file COPYING.  If not, write to
+  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+
+-->
+<set>
+    <channel id="bass" file="../../samples/Novation_BassStation_1.wav" volume="80" active="1">
+	<part id="bass">
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="1" volume="60"/>
+	    <pad active="0"/>
+
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="0" volume="50"/>
+	    <pad active="0"/>
+
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="1" volume="40"/>
+	    <pad active="0"/>
+
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="0" volume="30"/>
+	</part>
+    </channel>
+    <channel id="kick" file="../../samples/kick.wav" active="1">
+	<part id="kick_part_1">
+	    <pad active="1"/>
+	    <pad active="0"/>
+	    <pad active="0" volume="60"/>
+	    <pad active="0"/>
+	    <pad active="1"/>
+	    <pad active="0"/>
+	    <pad active="1" volume="50"/>
+	    <pad active="0"/>
+	    <pad active="1"/>
+	    <pad active="0" volume="50"/>
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="1"/>
+	    <pad active="0"/>
+	    <pad active="1" volume="70"/>
+	    <pad active="0" />
+	</part>
+    </channel>
+    <channel id="snare" file="../../samples/SnareDrum.wav" volume="30" active="1">
+	<part id="snare_part_1">
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="0"/>
+
+	    <pad active="1"/>
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="0"/>
+
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="0"/>
+
+	    <pad active="1"/>
+	    <pad active="0"/>
+	    <pad active="0" volume="45"/>
+	    <pad active="0"/>
+	</part>
+    </channel>
+    <channel id="hihat" file="../../samples/Closed-02.wav" volume="30" active="1">
+	<part id="hihat_part_1">
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="1" volume="50"/>
+	    <pad active="0"/>
+	    <pad active="1"/>
+	    <pad active="0"/>
+	    <pad active="1" volume="50"/>
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="0"/>
+	    <pad active="1" volume="50"/>
+	    <pad active="0"/>
+	    <pad active="1"/>
+	    <pad active="0"/>
+	    <pad active="1" volume="50"/>
+	    <pad active="0"/>
+	</part>
+    </channel>
+    <channel id="ride" file="../../samples/Ride-02.wav" volume="30" active="1">
+	<part id="ride_part_1">
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="1"/>
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="1"/>
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="1"/>
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="0"/>
+	    <pad active="1"/>
+	    <pad active="0"/>
+	</part>
+	<part id="ride_part_2">
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="1"/>
+	    <pad active="0"/>
+	</part>
+    </channel>
+    <pattern id="pattern_1">
+	<part ref="kick_part_1"/>
+    </pattern>
+    <pattern id="pattern_2">
+	<part ref="ride_part_2"/>
+	<part ref="kick_part_1"/>
+	<part ref="hihat_part_1"/>
+    </pattern>
+    <pattern id="pattern_3">
+	<part ref="snare_part_1"/>
+	<part ref="ride_part_1"/>
+	<part ref="kick_part_1"/>
+	<part ref="hihat_part_1"/>
+	<part ref="bass"/>
+    </pattern>
+    <song tempo="120">
+	<pattern ref="pattern_1"/>
+	<pattern ref="pattern_3"/>
+	<pattern ref="pattern_2"/>
+    </song>
+</set>

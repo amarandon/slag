@@ -1,0 +1,20 @@
+Mac OS X specific notes
+=======================
+
+On Mac OS X, Slag only works with JACK, not with libao. So you have to install
+JackOSX from http://www.jackosx.com/ before you build and use Slag. 
+
+To build from source, I had to set the QMAKESPEC environment variable to
+"macx-g++".
+
+The main Makefile includes 2 specific targets for Mac OS X. In order to make a
+statically linked application bundle called slag.app, type the command :
+
+$ make bundle
+
+There is also a "mac_pkg" target which makes a bziped tar archive of the bundle.
+Slag will be statically linked with libsndfile, libsamplerate, and Qt3, but
+still dynamically to libjack, since users must install JACK to use Slag anyway.
+
+You can also get a precompiled bundle archives from : 
+   http://download.savannah.gnu.org/releases/slag/

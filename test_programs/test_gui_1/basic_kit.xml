@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!-- 
+
+  $Id: basic_kit.xml,v 1.3 2005/01/30 22:25:56 rhizome Exp $
+
+      Copyright (C) 2004, 2005 Alex Marandon
+
+  This file is part of slag, a pattern-based audio sequencer.
+
+  slag is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2, or (at your option)
+  any later version.
+
+  slag is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with slag; see the file COPYING.  If not, write to
+  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+
+-->
+<slag>
+    <channel id="bd" file="../../samples/bd.wav" active="1" />
+    <channel id="snare" file="../../samples/snare.wav" active="1" />
+    <channel id="ch" file="../../samples/ch.wav" active="1" />
+    <channel id="ride" file="../../samples/ride.wav" active="1" />
+    <channel id="bass" file="../../samples/Novation_BassStation_1.wav" active="1" />
+    <part id="bd_part_1">
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0" /> <pad active="0" />
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0" /> <pad active="0" />
+    </part>
+    <part id="snare_part_1">
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0" /> <pad active="0" />
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0" /> <pad active="0" />
+    </part>
+    <part id="charley_part_1">
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0" /> <pad active="0" />
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0" /> <pad active="0" />
+    </part>
+    <part id="ride_part_1">
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+    </part>
+    <part id="bass_part_1">
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+        <pad active="0"/> <pad active="0"/> <pad active="0"/> <pad active="0"/>
+    </part>
+    <pattern id="pattern_1">
+        <channel ref="bd"    part="bd_part_1"/>
+        <channel ref="snare" part="snare_part_1"/>
+        <channel ref="ch"    part="charley_part_1"/>
+        <channel ref="ride"  part="ride_part_1" />
+        <channel ref="bass"  part="bass_part_1" />
+    </pattern>
+    <pattern id="pattern_2">
+        <channel ref="bd"    part="bd_part_1"/>
+        <channel ref="snare" part="snare_part_1"/>
+        <channel ref="ch"    part="charley_part_1"/>
+        <channel ref="ride"  part="ride_part_1" />
+        <channel ref="bass"  part="bass_part_1" />
+    </pattern>
+    <song tempo="120">
+        <pattern ref="pattern_1"/>
+        <pattern ref="pattern_2"/>
+    </song>
+</slag>

@@ -1,0 +1,371 @@
+<slag>
+    <channel row_index="0" active="1" volume="100" id="kick"
+        file="../sounds/2085_opm_KK_set1.wav" />
+    <channel row_index="1" active="1" volume="100" id="snare"
+        file="../sounds/2104_opm_SN_set5.wav" />
+    <channel row_index="2" active="1" volume="91" id="ch"
+        file="../sounds/2075_opm_CH_set1.wav" />
+    <channel row_index="3" active="1" volume="36" id="oh"
+        file="../sounds/2093_opm_OH_set4.wav" />
+    <channel row_index="4" active="1" volume="62" id="tm"
+        file="../sounds/2107_opm_TM_set3.wav" />
+  <part id="kick part 1" >
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+  </part>
+  <part id="snare part 1" >
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+  </part>
+  <part id="ch part 1" >
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+  </part>
+  <part id="oh part 1" >
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+  </part>
+  <part id="tm part 1" >
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+  </part>
+  <part id="kick part 2" >
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+  </part>
+  <part id="snare part 2" >
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+  </part>
+  <part id="ch part 2" >
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+  </part>
+  <part id="oh part 2" >
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+  </part>
+  <part id="tm part 2" >
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+    <pad active="0" volume="100" />
+  </part>
+  <pattern id="pattern_1" >
+    <channel part="tm part 1" ref="tm" />
+    <channel part="oh part 1" ref="oh" />
+    <channel part="ch part 1" ref="ch" />
+    <channel part="snare part 1" ref="snare" />
+    <channel part="kick part 1" ref="kick" />
+  </pattern>
+  <pattern id="pattern_2" >
+    <channel part="tm part 2" ref="tm" />
+    <channel part="oh part 2" ref="oh" />
+    <channel part="ch part 2" ref="ch" />
+    <channel part="snare part 2" ref="snare" />
+    <channel part="kick part 2" ref="kick" />
+  </pattern>
+  <song tempo="150" volume="97" >
+    <pattern ref="pattern_1" />
+    <pattern ref="pattern_2" />
+  </song>
+</slag>
+
