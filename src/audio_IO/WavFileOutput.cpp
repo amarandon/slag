@@ -1,7 +1,7 @@
 /*
  *   $Id: WavFileOutput.cpp,v 1.7 2007/01/26 07:39:55 rhizome Exp $
  * 
- *      Copyright (C) 2004-2007 Alex Marandon
+ *      Copyright (C) 2004-2008 Alex Marandon
  *
  *  This file is part of slag, a pattern-based audio sequencer.
  *

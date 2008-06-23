@@ -2,7 +2,7 @@
  *
  *   $Id: Song.cpp,v 1.64 2007/01/28 08:13:58 rhizome Exp $
  *
- *      Copyright (C) 2004-2007 Alex Marandon
+ *      Copyright (C) 2004-2008 Alex Marandon
  *
  *  This file is part of slag, a pattern-based audio sequencer.
  *

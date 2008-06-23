@@ -1,7 +1,7 @@
 /*
  *   $Id: WavFile.h,v 1.2 2005/01/15 14:05:25 rhizome Exp 
  * 
- *      Copyright (C) 2004-2007 Alex Marandon
+ *      Copyright (C) 2004-2008 Alex Marandon
  *
  *  This file is part of slag, a pattern-based audio sequencer.
  *

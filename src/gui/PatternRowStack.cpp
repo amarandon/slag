@@ -1,7 +1,7 @@
 /*
  *   $Id: cpp_impl.cpp,v 1.1 2007/02/15 08:14:16 al Exp $
  *
- *      Copyright (C) 2004-2007 Alex Marandon
+ *      Copyright (C) 2004-2008 Alex Marandon
  *
  *  This file is part of slag, a pattern-based audio sequencer.
  *
