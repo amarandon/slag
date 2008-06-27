@@ -122,7 +122,6 @@ PatternRow::PatternRow(QWidget* parent, Song* song, RowContext* row_context)
     vLayout->addLayout(notesLayout, Qt::AlignTop);
     vLayout->addWidget(tabWidget, Qt::AlignTop);
     vLayout->setMargin(0);
-    notesLayout->addSpacing(1);
     for (uint pad_i = 1; pad_i < song->nbPads() + 1; ++pad_i) {
 
         QPushButton * button = new PadButton(this);

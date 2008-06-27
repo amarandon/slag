@@ -43,12 +43,12 @@ TimeLine::TimeLine(int nb_pads)
     width -= buttonGap;
     width -= stepGap;
     width -= 1;
-    setMinimumHeight(height + 1);
+    setMinimumHeight(height + 2);
 }
 
 void TimeLine::paintEvent(QPaintEvent *) {
     QPainter painter(this);
-    painter.setPen(QPen(Qt::black, 2, Qt::SolidLine));
+    painter.setPen(QPen(Qt::black, 1, Qt::SolidLine));
     painter.setBrush(Qt::white);
     painter.drawRect(1, 1, width - 1, height);
     painter.setBrush(Qt::gray);

@@ -98,16 +98,20 @@ MainWidget::MainWidget(Slag* slag, Q3ProgressDialog* progress_dialog) :
     QVBoxLayout* verticalLayout = new QVBoxLayout;
     verticalLayout->setMargin(0);
 
-    QBoxLayout* timeLineLayout = new QHBoxLayout;
-    timeLineLayout->addSpacing(20);
-    patternLabel->setMaximumWidth(188);
-    timeLineLayout->addWidget(patternLabel);
-    timeLineLayout->addWidget(timeline);
-    timeLineLayout->setResizeMode(QLayout::Fixed);
+//    QBoxLayout* timeLineLayout = new QHBoxLayout;
+//    timeLineLayout->addSpacing(20);
+//    patternLabel->setMaximumWidth(188);
+//    timeLineLayout->addWidget(patternLabel);
+//    timeLineLayout->addWidget(timeline);
+//    timeLineLayout->setResizeMode(QLayout::Fixed);
 
-    verticalLayout->addSpacing(5);
-    verticalLayout->addLayout(timeLineLayout);
-    verticalLayout->addSpacing(5);
+//    verticalLayout->addSpacing(5);
+//    verticalLayout->addLayout(timeLineLayout);
+//    verticalLayout->addSpacing(5);
+
+    scrollWidgetLayout->addWidget(patternLabel, 0, 0, Qt::AlignTop);
+    scrollWidgetLayout->addWidget(timeline, 0, 1, Qt::AlignTop);
+
     QScrollArea* area = new QScrollArea;
     area->setWidget(scrollWidget);
     verticalLayout->addWidget(area);
