@@ -31,7 +31,6 @@
 // Inclusion des drivers audio
 #include "NullDriver.h"
 #include "WavFileOutput.h"
-#include "RtAudioDriver.h"
 
 #ifdef WITH_JACK
   #include "JackDriver.h"
@@ -71,12 +70,7 @@ void AudioDriverFactory::setSongReader(SongReader* songReader) {
 AudioDriver* AudioDriverFactory::create() {
     AudioDriver* driver = NULL;
     config = Config::instance();
-#ifdef Q_WS_WIN
-    driver = createRtAudioDriver();
-#else
-    if (config->audioDriverName() == RTAUDIO_LABEL)
-        driver = createRtAudioDriver();
-    else if (config->audioDriverName() == LIBAO_LABEL)
+    if (config->audioDriverName() == LIBAO_LABEL)
         driver = createLibaoDriver();
     else if (config->audioDriverName() == NULL_LABEL)
         driver = createNullDriver();
@@ -84,7 +78,6 @@ AudioDriver* AudioDriverFactory::create() {
         driver = createJackTrackDriver();
     else
         driver = createJackDriver();
-#endif
 
     Q_ASSERT(driver != NULL);
     return driver;
@@ -115,14 +108,6 @@ AudioDriver* AudioDriverFactory::createJackTrackDriver() {
     qFatal(not_compiled_str.arg("JACK"));
     return NULL;
 #endif
-}
-
-AudioDriver* AudioDriverFactory::createRtAudioDriver() {
-    global_buffer_n_samples = config->buffer_n_samples();
-    AudioDriver* driver = new RtAudioDriver(process, global_buffer_n_samples);
-    config->setAudioDriverName(RTAUDIO_LABEL);
-    Q_ASSERT(driver != NULL);
-    return driver;
 }
 
 AudioDriver* AudioDriverFactory::createLibaoDriver() {

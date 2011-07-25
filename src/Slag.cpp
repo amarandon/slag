@@ -22,6 +22,7 @@
  */
 #include <ctime>
 #include <iostream>
+#include <cstdlib>
 #include <QSettings>
 #include <QTextCodec>
 #include <QTranslator>
@@ -95,12 +96,6 @@ void Slag::showLibaoErrorPopup() {
                "\nDefaults to Null driver."));
 }
 
-void Slag::showRtAudioErrorPopup() {
-    QMessageBox::critical(NULL, tr("Slag - RtAudio error"), 
-            tr("Unable to use RtAudio for audio output"
-               "\nDefaults to Null driver."));
-}
-
 void Slag::initAudioDriver() {
 
     if (driver != NULL) {
@@ -122,10 +117,6 @@ void Slag::initAudioDriver() {
     } catch (audio_IO::LibaoConnectionException & e) {
         qWarning(e.what());
         showLibaoErrorPopup();
-        driver = audioDriverFactory->createNullDriver();
-    } catch (audio_IO::RtAudioConnectionException & e) {
-        qWarning(e.what());
-        showRtAudioErrorPopup();
         driver = audioDriverFactory->createNullDriver();
     }
 

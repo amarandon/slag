@@ -21,6 +21,7 @@
  *
  */
 
+#include <cstdlib>
 #include "JackDriver.h"
 #include "RingBufferDriver.h"
 #include "WavFileOutput.h"

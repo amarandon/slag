@@ -39,7 +39,6 @@ private:
     JackErrorCallback jackErrorCallBack;
     Config* config;
     AudioDriver* createLibaoDriver();
-    AudioDriver* createRtAudioDriver();
     AudioDriver* createJackTrackDriver();
     AudioDriver* createJackDriver();
 };

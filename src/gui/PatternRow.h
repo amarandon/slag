@@ -26,6 +26,7 @@
 
 #include <QWidget>
 #include <QLabel>
+#include <memory>
 
 class QLabel;
 class QCheckBox;

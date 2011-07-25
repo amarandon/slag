@@ -1,0 +1,14 @@
+*.swp
+Makefile
+aclocal.m4
+configure
+object_files/
+qrc_slag.cpp
+slag
+slag.mak
+slag.pro
+src/config.h
+src/config.h.in~
+src/gui/ui_preferences_dialog.h
+src/gui/ui_song_properties_dialog.h
+src/moc/

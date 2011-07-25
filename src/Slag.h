@@ -70,7 +70,6 @@ class Slag : public QApplication {
     void installTranslators();
     void showJackErrorPopup();
     void showLibaoErrorPopup();
-    void showRtAudioErrorPopup();
     void initJackDriver();
     void initJackTrackDriver();
     void initLibaoDriver();

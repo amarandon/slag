@@ -27,7 +27,6 @@
 const QString JACK_LABEL = "JACK";
 const QString NULL_LABEL = "Null";
 const QString LIBAO_LABEL = "libao";
-const QString RTAUDIO_LABEL = "RtAudio";
 
 const unsigned int padButtonWidth = 15;
 const unsigned int padButtonHeight = 25;

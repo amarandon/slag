@@ -34,9 +34,6 @@ namespace audio_IO   {
     struct LibaoConnectionException : public std::runtime_error {
         LibaoConnectionException(std::string msg) : std::runtime_error(msg) {}
     };
-    struct RtAudioConnectionException : public std::runtime_error {
-        RtAudioConnectionException(std::string msg) : std::runtime_error(msg) {}
-    };
 }
 
 
